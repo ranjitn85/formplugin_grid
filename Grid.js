@@ -830,7 +830,23 @@ let NintexSamplegrid = _decorate([e$2('nintex-grid')], function (_initialize, _L
 
       function getMetaConfig() {
         // plugin contract information
-        return import('./grid.config-fb550296.js');
+        return {
+          controlName: 'nintex-grid',
+          description: 'Example of Data Grid with hard-coded data',
+          groupName: 'Visual',
+          fallbackDisableSubmit: false,
+          version: '1.0',
+          properties: {
+            sortable: {
+              type: 'boolean',
+              title: 'Allow Sorting'
+            },
+            Data: {
+              type: 'string',
+              title: 'Data to be rendered in the grid'
+            }
+          }
+        };
       }
     }, {
       kind: "method",
